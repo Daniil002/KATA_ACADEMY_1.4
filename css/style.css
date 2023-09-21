@@ -1,0 +1,172 @@
+@font-face {
+    font-family: "TT Lakes";
+    src: url("../fonts/TTLakes-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "TT Lakes Medium";
+    src: url("../fonts/TTLakes-DemiBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "TT Lakes Bold";
+    src: url("../fonts/TTLakes-Bold.ttf") format("truetype");
+
+}
+
+
+html {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    outline: none;
+}
+
+.container {
+    width: 320px;
+    height: 1024px;
+}
+
+.menu__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 24px;
+    padding-top: 23px;
+    padding-right: 24px;
+}
+
+.menu__list-logo {
+    margin-right: 78px;
+}
+
+/* main */
+
+.main__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 24px;
+    margin-top: 50px;
+}
+
+.menu__list-button {
+    margin-bottom: 32px;
+    font-family: "TT Lakes Medium";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; 
+}
+
+.footer {
+    margin-top: 268px;
+}
+
+.footer__menu-list {
+    display: flex;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.footer__list-item {
+    margin-right: 16px;
+}
+
+.footer__contact {
+    padding-left: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-mail {
+    color: #1B1C21;
+    font-family: "TT Lakes Medium";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.footer-number {
+    margin-top: 16px;
+    color: #1B1C21;
+    font-family: "TT Lakes Bold";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 133.333% */
+}
+
+.lang__menu {
+    padding-bottom: 40px;
+    padding-top: 32px;
+    padding-left: 24px;
+
+    
+}
+
+.lang__menu-button {
+    color: #1B1C21;
+    font-family: "TT Lakes Medium";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; 
+}
+
+
+.button {
+    transition: color 0.3s;
+}
+
+.button:hover {
+    color: #7E7E82;
+}
+
+.menu__list-button {
+    position: relative;
+} 
+
+.menu__list-button::before {
+    content: '';
+    /* Обязательное свойство для псевдоэлемента */
+    background-image: url('../images/highlight.svg');
+    /* Путь к изображению */
+    width: 4px;
+    height: 32px;
+    flex-shrink: 0;
+    margin-left: -23px;
+    /* Можешь задать отступ справа от текста */
+    position: absolute;
+    /* Абсолютное позиционирование */
+    top: -5px;
+    /* Прижатие к верхнему краю .title */
+    left: 0;
+    opacity: 0; /* Начальная непрозрачность 0, чтобы был невидимым */
+    transition: opacity 0.3s;
+
+}
+
+
+.menu__list-button:hover::before {
+    opacity: 1; /* Делаем псевдоэлемент видимым при наведении */
+}
+
+
