@@ -25,7 +25,9 @@ ul {
 
 a {
     text-decoration: none;
+    color: inherit;
 }
+
 
 .button {
     background: none;
@@ -38,9 +40,17 @@ a {
     outline: none;
 }
 
+
+
 .container {
     width: 320px;
-    height: 1024px;
+    box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.20), -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+    height: 100vh;
+    
+}
+
+.main {
+    min-height: calc(100vh - 360px);
 }
 
 .menu__list {
@@ -50,10 +60,11 @@ a {
     padding-left: 24px;
     padding-top: 23px;
     padding-right: 24px;
+    margin-top: 0;
 }
 
 .menu__list-logo {
-    margin-right: 78px;
+    margin-right: 60px;
 }
 
 /* main */
@@ -63,20 +74,18 @@ a {
     flex-direction: column;
     align-items: flex-start;
     padding-left: 24px;
-    margin-top: 50px;
+    margin-top: 50px; 
 }
 
-.menu__list-button {
-    margin-bottom: 32px;
+
+.main__list-item {
+    color: #1B1C21;
+    margin-bottom: 27px;
     font-family: "TT Lakes Medium";
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: 24px; 
-}
-
-.footer {
-    margin-top: 268px;
 }
 
 .footer__menu-list {
@@ -111,11 +120,10 @@ a {
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
-    line-height: 32px; /* 133.333% */
+    line-height: 32px; 
 }
 
 .lang__menu {
-    padding-bottom: 40px;
     padding-top: 32px;
     padding-left: 24px;
 
@@ -132,41 +140,42 @@ a {
 }
 
 
-.button {
+.button,
+.main__list-link{
     transition: color 0.3s;
 }
 
-.button:hover {
+.button:hover,
+.main__list-link:hover {
     color: #7E7E82;
 }
 
-.menu__list-button {
+.main__list-link {
+    display: block;
+    padding: 5px;
     position: relative;
 } 
 
-.menu__list-button::before {
+.main__list-link::before {
     content: '';
-    /* Обязательное свойство для псевдоэлемента */
     background-image: url('../images/highlight.svg');
-    /* Путь к изображению */
     width: 4px;
     height: 32px;
     flex-shrink: 0;
     margin-left: -23px;
-    /* Можешь задать отступ справа от текста */
     position: absolute;
-    /* Абсолютное позиционирование */
-    top: -5px;
-    /* Прижатие к верхнему краю .title */
+    top: -3px;
     left: 0;
-    opacity: 0; /* Начальная непрозрачность 0, чтобы был невидимым */
+    opacity: 0; 
     transition: opacity 0.3s;
 
 }
 
 
-.menu__list-button:hover::before {
-    opacity: 1; /* Делаем псевдоэлемент видимым при наведении */
+.main__list-link:hover::before {
+    opacity: 1; 
 }
+
+
 
 
