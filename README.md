@@ -1,4 +1,4 @@
-# KATA_ACADEMY_1.4
+# project_html_1
 pages: https://daniil002.github.io/KATA_ACADEMY_1.4/
 
 
